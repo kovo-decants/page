@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KOVO – Decants de perfumes originales</title>
+<meta name="description" content="Decants de 5 ml de perfumes originales. Elegí tu perfume según la ocasión. Envíos a todo el país.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#fff;--soft:#f6f4ef;--line:#e6e2d8;--tx:#161412;--mut:#6b655b;--gold:#b08a3e;--gold-l:#efe3c6;--ink:#161412;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;height:100%}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.55 Jost,system-ui,sans-serif;padding-bottom:76px}
+h1,h2,h3{font-family:"Bodoni Moda",Georgia,serif;font-weight:500;line-height:1.15;margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.bar{background:var(--ink);color:#fff;text-align:center;font-size:13px;padding:7px 12px}
+header{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:4}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.logo{font-family:"Bodoni Moda",serif;font-size:26px;letter-spacing:.26em;font-weight:700;text-decoration:none}
+nav{display:flex;gap:6px;align-items:center}
+nav a{text-decoration:none;padding:8px 12px;border-radius:99px;font-size:15px;color:var(--mut)}
+nav a[aria-current=page]{color:var(--tx);background:var(--soft)}
+.cartbtn{background:none;border:1px solid var(--ink);border-radius:99px;padding:7px 15px;font-size:14px}
+.btn{display:inline-block;text-align:center;background:var(--ink);color:#fff;border:1px solid var(--ink);border-radius:4px;padding:13px 24px;font-weight:500;text-decoration:none}
+.btn.gold{background:var(--gold);border-color:var(--gold)}
+.btn.line{background:none;color:var(--tx)}
+.btn.full{display:block;width:100%}
+.view{display:none}.view.on{display:block}
+.hero{display:grid;gap:28px;padding:36px 0 30px}
+.hero h1{font-size:38px;letter-spacing:-.01em}
+.hero p{color:var(--mut);max-width:42ch;margin:14px 0 22px}
+.hero .acts{display:flex;gap:10px;flex-wrap:wrap}
+.ph{background:var(--soft);border:1px dashed #cfc9ba;border-radius:8px;display:grid;place-items:center;color:var(--mut);font-size:14px;text-align:center;padding:12px}
+.hero .ph{aspect-ratio:4/3}
+.trust{display:grid;gap:14px;padding:0 0 34px}
+.trust div{border-left:2px solid var(--gold);padding-left:12px;color:var(--mut);font-size:14px}
+.trust b{display:block;color:var(--tx);font-weight:500;font-size:16px}
+section{padding:34px 0}
+.soft{background:var(--soft)}
+h2{font-size:28px;margin-bottom:6px}
+.sub{color:var(--mut);margin:0 0 20px;max-width:56ch}
+.occ{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+.occ button{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:18px 14px;text-align:left}
+.occ button:hover{border-color:var(--gold)}
+.occ b{display:block;font-family:"Bodoni Moda",serif;font-size:20px;font-weight:500}
+.occ span{font-size:14px;color:var(--mut)}
+.combo{border:1px solid var(--gold);background:var(--gold-l);border-radius:8px;padding:22px 18px;display:grid;gap:12px}
+.combo h2{font-size:28px;margin:0}
+.price{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.price s{color:var(--mut)}
+.price b{font-family:"Bodoni Moda",serif;font-size:30px}
+.save{background:var(--ink);color:#fff;font-size:13px;padding:3px 10px;border-radius:99px}
+.stock{height:6px;background:#fff;border-radius:9px;overflow:hidden}
+.stock i{display:block;height:100%;background:var(--gold)}
+.small{font-size:13px;color:var(--mut)}
+.vids{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+.vid{flex:none;width:60%;aspect-ratio:9/16;scroll-snap-align:start;background:var(--bg);border:1px dashed #cfc9ba;border-radius:8px;display:flex;flex-direction:column;justify-content:flex-end;padding:14px}
+.vid small{color:var(--mut)}
+ol{list-style:none;padding:0;margin:0;counter-reset:s;display:grid;gap:0}
+ol li{counter-increment:s;display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line)}
+ol li::before{content:counter(s);font-family:"Bodoni Moda",serif;color:var(--gold);font-size:28px;width:26px;flex:none;line-height:1}
+details{border-top:1px solid var(--line);padding:15px 0;max-width:760px}
+summary{cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--gold)}
+details[open] summary::after{content:"–"}
+details p{color:var(--mut);margin:10px 0 0}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:14px}
+.chip{flex:none;background:none;border:1px solid var(--line);border-radius:99px;padding:8px 18px}
+.chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.grid{display:grid;gap:20px}
+.prod{border:1px solid var(--line);border-radius:8px;padding:14px;display:flex;flex-direction:column}
+.prod .ph{aspect-ratio:1/1;margin-bottom:14px}
+.prod h3{font-size:22px}
+.notes{color:var(--mut);margin:4px 0 10px;font-size:15px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tags span{background:var(--soft);border-radius:3px;padding:2px 9px;font-size:12px;color:var(--mut)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.seg button{background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:10px 9px;text-align:left}
+.seg button[aria-pressed=true]{border-color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold);background:var(--gold-l)}
+.seg b{display:block;font-weight:500}
+.seg span{font-size:13px;color:var(--mut)}
+.left{color:var(--gold);font-size:13px;font-weight:500;margin:0 0 10px;min-height:20px}
+.prod .btn{margin-top:auto}
+footer{background:var(--ink);color:#d8d2c4;padding:26px 0;font-size:14px;margin-top:30px}
+.fbar{position:fixed;left:0;right:0;bottom:0;background:var(--bg);border-top:1px solid var(--gold);padding:10px 20px calc(10px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;justify-content:space-between;z-index:5}
+.fbar .btn{padding:10px 20px}
+.drawer{position:fixed;inset:0;z-index:10;display:none;background:rgba(22,20,18,.45)}
+.drawer.on{display:block}
+.sheet{position:absolute;left:0;right:0;bottom:0;max-width:520px;margin:auto;max-height:90%;overflow:auto;background:var(--bg);border-radius:14px 14px 0 0;padding:20px 20px calc(20px + env(safe-area-inset-bottom,0px))}
+.row{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);align-items:center}
+.qty button{width:30px;height:30px;border-radius:50%;border:1px solid var(--ink);background:none}
+.qty span{display:inline-block;width:26px;text-align:center}
+select{width:100%;background:var(--bg);color:var(--tx);border:1px solid var(--line);border-radius:4px;padding:11px;font:inherit;margin:8px 0 12px}
+.tot{display:flex;justify-content:space-between;padding:5px 0}
+.tot.big{font-size:20px;font-family:"Bodoni Moda",serif;border-top:1px solid var(--gold);margin-top:8px;padding-top:12px}
+.prog{height:6px;background:var(--soft);border-radius:9px;overflow:hidden;margin:8px 0 4px}
+.prog i{display:block;height:100%;background:var(--gold);transition:width .3s}
+button:focus-visible,a:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.bgrid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.bc{display:flex;flex-direction:column;gap:8px;border:1px solid var(--line);border-radius:8px;padding:18px;text-decoration:none;background:var(--bg)}
+.bc:hover{border-color:var(--gold)}
+.bc h3{font-size:20px}
+.bc span{color:var(--mut);font-size:15px}
+.bc em{font-style:normal;color:var(--gold);font-size:14px;font-weight:500;margin-top:auto;padding-top:6px}
+.post{max-width:680px;padding:34px 0 10px}
+.post h1{font-size:34px;margin:12px 0 20px}
+.post p{margin:0 0 16px;font-size:17px}
+.back{color:var(--mut);font-size:14px}
+@media (min-width:640px){
+ .hero h1{font-size:46px}.trust{grid-template-columns:repeat(3,1fr)}
+ .occ{grid-template-columns:repeat(4,1fr)}.grid{grid-template-columns:repeat(2,1fr)}
+ .vid{width:32%}ol{grid-template-columns:repeat(2,1fr);column-gap:30px}
+ .combo{grid-template-columns:1fr auto;align-items:center}
+}
+@media (min-width:980px){
+ .hero{grid-template-columns:1.05fr 1fr;align-items:center;padding:60px 0 44px}.hero h1{font-size:56px}
+ .grid{grid-template-columns:repeat(3,1fr)}.vid{width:calc((100% - 24px)/3)}
+ ol{grid-template-columns:repeat(4,1fr)}ol li{flex-direction:column;gap:6px}
+ .fbar{display:none}body{padding-bottom:0}
+ .sheet{top:0;left:auto;max-width:420px;max-height:none;border-radius:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="bar">Envíos a todo el país con Andreani · Envío gratis desde $60.000</div>
+<header><div class="wrap hd">
+  <a class="logo" href="#inicio">KOVO</a>
+  <nav><a href="#inicio" id="n1">Inicio</a><a href="#tienda" id="n2">Elegí tu perfume</a><a href="#blog" id="n3">Blog</a><button class="cartbtn" id="open1">Carrito (<span id="cnt">0</span>)</button></nav>
+</div></header>
+
+<main>
+<div class="view" id="v-inicio">
+ <div class="wrap">
+  <div class="hero">
+   <div>
+    <h1>Probá el perfume antes de comprar el frasco.</h1>
+    <p>Decants de 5 ml de perfumes originales. Te ayudamos a elegir según la ocasión y te lo mandamos a tu casa.</p>
+    <div class="acts"><a class="btn" href="#tienda">Elegí tu perfume</a><button class="btn line" data-go="como">Cómo comprar</button></div>
+   </div>
+   <div class="ph">[Foto principal: tus decants y las cajas originales]</div>
+  </div>
+  <div class="trust">
+   <div><b>5 ml</b>Alcanza para unas 50 aplicaciones</div>
+   <div><b>Perfumes originales</b>Mirá las cajas y cómo hacemos el decant</div>
+   <div><b>Pagás en la web</b>Con Mercado Pago</div>
+  </div>
+ </div>
+
+ <section class="soft"><div class="wrap">
+  <h2>¿Para qué lo querés?</h2>
+  <p class="sub">Tocá una ocasión y vas directo a los perfumes que van con ella.</p>
+  <div class="occ">
+   <button data-occ="Noche"><b>Noche</b><span>Intensos y envolventes</span></button>
+   <button data-occ="Oficina"><b>Oficina</b><span>Frescos y prolijos</span></button>
+   <button data-occ="Frío"><b>Días fríos</b><span>Cálidos y especiados</span></button>
+   <button data-occ="Salida"><b>Salidas</b><span>Los que se notan</span></button>
+  </div>
+ </div></section>
+
+ <section><div class="wrap">
+  <div class="combo">
+   <div>
+    <h2>Las 3 bombas del invierno</h2>
+    <p class="sub" style="margin:6px 0 10px">Los 3 perfumes en decant de 5 ml, por menos que por separado.</p>
+    <div class="price"><s id="cs"></s><b id="cp"></b><span class="save" id="csv"></span></div>
+    <div class="stock" style="margin:10px 0 4px"><i style="width:38%"></i></div>
+    <p class="small" style="margin:0">Quedan 8 combos.</p>
+   </div>
+   <button class="btn gold" id="addcombo">Agregar el combo</button>
+  </div>
+ </div></section>
+
+ <section class="soft"><div class="wrap">
+  <h2>Mirá antes de comprar</h2>
+  <p class="sub">Tres videos cortos. Cada uno responde una duda.</p>
+  <div class="vids">
+   <div class="vid"><b>¿Qué son los decants?</b><small>[TikTok 1: pegar enlace]</small></div>
+   <div class="vid"><b>¿Cuánto dura un decant?</b><small>[TikTok 2: pegar enlace]</small></div>
+   <div class="vid"><b>Las 3 bombas del invierno</b><small>[TikTok 3: pegar enlace]</small></div>
+  </div>
+ </div></section>
+
+ <section><div class="wrap">
+  <h2>Todo sobre decants y perfumes</h2>
+  <p class="sub">Notas cortas para elegir mejor, usar mejor y que te dure más.</p>
+  <div class="bgrid" id="home-blog"></div>
+  <p style="margin-top:20px"><a class="btn line" href="#blog">Ver todo el blog</a></p>
+ </div></section>
+
+ <section id="como"><div class="wrap">
+  <h2>Cómo comprar</h2>
+  <p class="sub">Cuatro pasos, desde el celular, la tablet o la compu.</p>
+  <ol>
+   <li><div><b>Elegí</b><br><span class="small">Decant de 5 ml o frasco entero.</span></div></li>
+   <li><div><b>Calculá el envío</b><br><span class="small">Elegís tu provincia en el carrito.</span></div></li>
+   <li><div><b>Pagá con Mercado Pago</b><br><span class="small">Tarjeta, débito o dinero en cuenta.</span></div></li>
+   <li><div><b>Recibilo</b><br><span class="small">Te mandamos el seguimiento de Andreani.</span></div></li>
+  </ol>
+ </div></section>
+
+ <section class="soft"><div class="wrap">
+  <h2>¿Son originales?</h2>
+  <p class="sub">Sí. Compramos frascos originales y los fraccionamos nosotros. [Subir fotos de las cajas y el video del proceso.]</p>
+ </div></section>
+
+ <section id="faq"><div class="wrap">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Cuánto tarda en llegar?</summary><p>Los decants salen en [X] días hábiles. Los frascos enteros demoran 8 días hábiles. Después depende de Andreani y de tu zona.</p></details>
+  <details><summary>¿Cuánto dura un decant de 5 ml?</summary><p>Alrededor de 50 aplicaciones, según cuánto uses. [Ajustar con tu medición.]</p></details>
+  <details><summary>¿Cómo calculan el envío?</summary><p>Por provincia. Lo ves en el carrito antes de pagar.</p></details>
+  <details><summary>¿Y si llega dañado?</summary><p>Lo reponemos. Grabá un video abriendo el paquete sin cortes y mandanos fotos de la caja y la etiqueta dentro de las 48 horas. [Definir política final.]</p></details>
+  <details><summary>¿Cuánto cuesta el perfume entero?</summary><p>Lo ves en cada perfume. Se pide por encargo y demora 8 días hábiles.</p></details>
+ </div></section>
+</div>
+
+<div class="view" id="v-tienda">
+ <div class="wrap" style="padding-top:34px">
+  <h2 style="font-size:34px">Elegí tu perfume</h2>
+  <p class="sub">Filtrá por ocasión. En cada uno elegís decant de 5 ml o frasco entero.</p>
+  <div class="chips" id="chips"></div>
+  <div class="grid" id="list"></div>
+  <div style="margin-top:34px"><div class="combo">
+   <div><h2 style="font-size:24px">¿No te decidís? Llevate los 3</h2><p class="small" style="margin:6px 0 0">Las 3 bombas del invierno, en decant de 5 ml.</p></div>
+   <button class="btn gold" id="addcombo2">Agregar el combo</button>
+  </div></div>
+ </div>
+</div>
+<div class="view" id="v-blog">
+ <div class="wrap" style="padding-top:34px">
+  <h2 style="font-size:34px">Blog</h2>
+  <p class="sub">Guías cortas sobre decants y perfumes. Cada tema tiene su propia nota.</p>
+  <div class="bgrid" id="blog-list"></div>
+ </div>
+</div>
+<div class="view" id="v-post">
+ <div class="wrap"><article class="post" id="post"></article></div>
+</div>
+</main>
+
+<footer><div class="wrap">KOVO · Decants originales · Argentina<br><span style="color:#9d968a">Maqueta: precios, stock y textos entre [corchetes] son de ejemplo.</span></div></footer>
+
+<div class="fbar"><div><div class="small">Tu carrito</div><b id="ftot">$0</b></div><button class="btn" id="open2">Ver carrito</button></div>
+
+<div class="drawer" id="dr" role="dialog" aria-label="Carrito">
+ <div class="sheet">
+  <div class="row" style="border:0"><h2 style="font-size:24px;margin:0">Tu carrito</h2><button class="cartbtn" id="close">Cerrar</button></div>
+  <div id="items"></div>
+  <label class="small" for="prov">Provincia de entrega</label>
+  <select id="prov"></select>
+  <div id="sum"></div>
+  <button class="btn full" id="pay" style="margin-top:14px">Pagar con Mercado Pago</button>
+  <p class="small" id="msg"></p>
+ </div>
+</div>
+
+<script>
+var FREE=60000;
+var P=[
+ {id:"p1",n:"Perfume 1 · [Marca]",no:"[Notas: salida, corazón, fondo]",oc:["Noche","Frío"],tg:["Intenso","Dulce"],d:9500,f:98000,st:7},
+ {id:"p2",n:"Perfume 2 · [Marca]",no:"[Notas: salida, corazón, fondo]",oc:["Oficina","Frío"],tg:["Fresco","Amaderado"],d:8500,f:89000,st:12},
+ {id:"p3",n:"Perfume 3 · [Marca]",no:"[Notas: salida, corazón, fondo]",oc:["Noche","Salida"],tg:["Especiado","Cálido"],d:10500,f:105000,st:4}
+];
+var COMBO={n:"Combo Las 3 bombas (3 × 5 ml)",p:24000,s:28500};
+var ZONES={"CABA y GBA":4500,"Buenos Aires":5500,"Centro":6500,"Norte y Cuyo":8000,"Patagonia":10500};
+var PROV=[["CABA","CABA y GBA"],["Buenos Aires (GBA)","CABA y GBA"],["Buenos Aires (interior)","Buenos Aires"],["Córdoba","Centro"],["Santa Fe","Centro"],["Entre Ríos","Centro"],["La Pampa","Centro"],["Mendoza","Norte y Cuyo"],["San Juan","Norte y Cuyo"],["San Luis","Norte y Cuyo"],["Tucumán","Norte y Cuyo"],["Salta","Norte y Cuyo"],["Jujuy","Norte y Cuyo"],["Misiones","Norte y Cuyo"],["Neuquén","Patagonia"],["Río Negro","Patagonia"],["Chubut","Patagonia"],["Santa Cruz","Patagonia"],["Tierra del Fuego","Patagonia"]];
+var $=function(i){return document.getElementById(i)};
+var $$=function(s){return document.querySelectorAll(s)};
+var M=function(n){return "$"+n.toLocaleString("es-AR")};
+var cart={},sel={},filt="Todos";
+var B=[
+ {id:"que-son-los-decants",t:"¿Qué son los decants?",x:"Cómo probar un perfume original sin comprar el frasco.",b:["Un decant es una porción de un perfume original, pasada a un frasco chico con atomizador. Es el mismo perfume que el del frasco grande, en menos cantidad.","Sirve para probarlo varios días en tu piel antes de gastar en el frasco entero, o para tener varios perfumes distintos y usar el que va con cada día.","[Acá podés sumar cómo hacés el fraccionamiento y pegar el video.]"]},
+ {id:"cuanto-dura-un-decant",t:"¿Cuánto dura un decant de 5 ml?",x:"Cuántas aplicaciones rinde y qué cambia el resultado.",b:["Un decant de 5 ml rinde alrededor de 50 aplicaciones, según cuántos sprays uses cada vez. [Ajustar con tu medición real.]","Con 2 sprays por día alcanza para unas 3 a 4 semanas. Si lo usás solo para salidas, dura bastante más.","La duración del aroma sobre la piel es otra cosa: depende del perfume, de tu piel y del clima."]},
+ {id:"perfumes-frescos-y-calidos",t:"Perfumes frescos y cálidos: cuándo usar cada uno",x:"Qué situación acompaña a cada familia.",b:["Los perfumes frescos (cítricos, aromáticos, acuáticos) van bien con el calor, el día y la oficina. Se sienten limpios y no cansan.","Los cálidos (vainilla, ámbar, especias, maderas) funcionan mejor con frío y de noche. Tienen más presencia y se notan más.","Si dudás, pensá dónde lo vas a usar: lugares cerrados y de día piden algo suave; salidas de noche aguantan algo más intenso."]},
+ {id:"como-aplicar-el-perfume",t:"Cómo aplicar el perfume para que dure más",x:"Técnicas simples que cambian el resultado.",b:["Aplicalo sobre piel limpia y bien hidratada. La piel seca hace que el aroma se vaya antes.","Los mejores lugares son las zonas donde se siente el pulso, como las muñecas, el cuello y detrás de las orejas. Rociá a unos 15 o 20 centímetros.","No frotes las muñecas entre sí: eso rompe las notas y acorta la duración."]},
+ {id:"perfume-y-tu-piel",t:"Por qué un perfume huele distinto en cada persona",x:"El mismo perfume cambia según quién lo use.",b:["El aroma se mezcla con tu piel, y por eso un mismo perfume puede sentirse distinto en cada persona.","Influyen la hidratación, la temperatura del cuerpo y lo que comés o usás en la piel. Por eso conviene probar un decant varios días antes de decidirte por un frasco entero.","No hay perfumes solo de hombres o solo de mujeres para tu piel: probalo y fijate cómo te queda a vos."]},
+ {id:"perfumes-de-verano",t:"Cómo elegir un perfume de verano",x:"Qué buscar cuando sube la temperatura.",b:["En verano conviene buscar notas frescas: cítricos, hierbas, frutas y aromas acuáticos. Con calor, lo muy dulce o muy pesado puede resultar cargado.","Usá menos sprays que en invierno, porque el calor potencia el aroma.","[Acá vas a poder mostrar tus perfumes de verano cuando los sumes al catálogo.]"]},
+ {id:"como-guardar-un-decant",t:"Cómo guardar tu decant",x:"Cuidarlo para que no se eche a perder.",b:["Guardalo en un lugar fresco, seco y oscuro. La luz y el calor alteran el aroma con el tiempo.","Evitá el baño y el auto: los cambios de temperatura y la humedad lo afectan.","Mantené el atomizador bien cerrado y, si podés, dejá el decant en su caja o en un cajón."]}
+];
+var bcard=function(b){return '<a class="bc" href="#blog-'+b.id+'"><h3>'+b.t+'</h3><span>'+b.x+'</span><em>Leer nota</em></a>'};
+P.forEach(function(p){sel[p.id]="d"});
+
+function route(){
+ var h=location.hash.slice(1),post=null;
+ if(h.indexOf("blog-")===0){post=B.filter(function(b){return "blog-"+b.id===h})[0]||null;h=post?"post":"blog"}
+ else if(h!=="tienda"&&h!=="blog")h="inicio";
+ if(post){$("post").innerHTML='<a class="back" href="#blog">Volver al blog</a><h1>'+post.t+'</h1>'+post.b.map(function(x){return '<p>'+x+'</p>'}).join("")+'<p style="margin-top:26px"><a class="btn" href="#tienda">Elegí tu perfume</a></p>';document.title=post.t+" – KOVO"}else document.title="KOVO – Decants de perfumes originales";
+ ["inicio","tienda","blog","post"].forEach(function(v){$("v-"+v).classList.toggle("on",h===v)});
+ var cur=h==="post"?"blog":h;
+ ["inicio","tienda","blog"].forEach(function(v,i){$("n"+(i+1)).setAttribute("aria-current",cur===v?"page":"false")});
+ window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",route);
+
+document.addEventListener("click",function(e){
+ var o=e.target.closest("[data-occ]");
+ if(o){filt=o.dataset.occ;drawChips();drawList();if(location.hash==="#tienda")route();else location.hash="tienda"}
+ var g=e.target.closest("[data-go]");
+ if(g){var t=$(g.dataset.go);if(t)t.scrollIntoView()}
+});
+
+$("cs").textContent=M(COMBO.s);$("cp").textContent=M(COMBO.p);$("csv").textContent="Ahorrás "+M(COMBO.s-COMBO.p);
+var occ=["Todos","Noche","Oficina","Frío","Salida"];
+function drawChips(){$("chips").innerHTML=occ.map(function(o){return '<button class="chip" aria-pressed="'+(o===filt)+'" data-o="'+o+'">'+o+'</button>'}).join("")}
+$("chips").onclick=function(e){var o=e.target.dataset.o;if(!o)return;filt=o;drawChips();drawList()};
+
+function drawList(){
+ $("list").innerHTML=P.filter(function(p){return filt==="Todos"||p.oc.indexOf(filt)>-1}).map(function(p){
+  var t=sel[p.id];
+  return '<div class="prod"><div class="ph">[Foto del frasco]</div><h3>'+p.n+'</h3><p class="notes">'+p.no+'</p>'+
+  '<div class="tags">'+p.oc.concat(p.tg).map(function(x){return '<span>'+x+'</span>'}).join("")+'</div>'+
+  '<div class="seg"><button data-id="'+p.id+'" data-t="d" aria-pressed="'+(t==="d")+'"><b>Decant 5 ml</b><span>'+M(p.d)+'</span></button>'+
+  '<button data-id="'+p.id+'" data-t="f" aria-pressed="'+(t==="f")+'"><b>Frasco entero</b><span>'+M(p.f)+'</span></button></div>'+
+  '<p class="left">'+(t==="d"?"Quedan solo "+p.st+" decants":"Se entrega en 8 días hábiles")+'</p>'+
+  '<button class="btn full" data-add="'+p.id+'">Agregar al carrito</button></div>'}).join("");
+}
+$("list").onclick=function(e){
+ var b=e.target.closest("button");if(!b)return;
+ if(b.dataset.t){sel[b.dataset.id]=b.dataset.t;drawList()}
+ else if(b.dataset.add){var p=P.filter(function(x){return x.id===b.dataset.add})[0],t=sel[p.id];
+  add(p.id+t,p.n+(t==="d"?" · decant 5 ml":" · frasco entero"),t==="d"?p.d:p.f);b.textContent="Agregado ✓";setTimeout(function(){b.textContent="Agregar al carrito"},1200)}
+};
+["addcombo","addcombo2"].forEach(function(i){$(i).onclick=function(){add("combo",COMBO.n,COMBO.p);$("dr").classList.add("on")}});
+
+function add(k,n,pr){if(cart[k])cart[k].q++;else cart[k]={n:n,p:pr,q:1};draw()}
+var sub=function(){var s=0;for(var k in cart)s+=cart[k].p*cart[k].q;return s};
+var qty=function(){var s=0;for(var k in cart)s+=cart[k].q;return s};
+$("prov").innerHTML='<option value="">Elegí tu provincia</option>'+PROV.map(function(p,i){return '<option value="'+i+'">'+p[0]+'</option>'}).join("");
+$("prov").onchange=draw;
+
+function draw(){
+ var s=sub();$("cnt").textContent=qty();$("ftot").textContent=M(s);
+ var keys=Object.keys(cart);
+ $("items").innerHTML=keys.length?keys.map(function(k){var c=cart[k];
+  return '<div class="row"><div>'+c.n+'<div class="small">'+M(c.p)+'</div></div><div class="qty"><button data-k="'+k+'" data-d="-1" aria-label="Quitar uno">–</button><span>'+c.q+'</span><button data-k="'+k+'" data-d="1" aria-label="Agregar uno">+</button></div></div>'}).join(""):'<p class="small">Todavía no agregaste nada. Elegí un perfume o el combo.</p>';
+ var pi=$("prov").value,ship=null;
+ if(pi!==""&&s>0){ship=s>=FREE?0:ZONES[PROV[pi][1]]}
+ var left=Math.max(0,FREE-s);
+ $("sum").innerHTML='<div class="prog"><i style="width:'+Math.min(100,s/FREE*100)+'%"></i></div><p class="small">'+(left?'Te faltan '+M(left)+' para el envío gratis':'Tenés envío gratis')+'</p>'+
+ '<div class="tot"><span>Subtotal</span><span>'+M(s)+'</span></div>'+
+ '<div class="tot"><span>Envío Andreani</span><span>'+(ship===null?'Elegí provincia':ship===0?'Gratis':M(ship))+'</span></div>'+
+ '<div class="tot big"><span>Total</span><span>'+M(s+(ship||0))+'</span></div>';
+}
+$("items").onclick=function(e){var b=e.target.closest("button");if(!b)return;var c=cart[b.dataset.k];c.q+=+b.dataset.d;if(c.q<1)delete cart[b.dataset.k];draw()};
+["open1","open2"].forEach(function(i){$(i).onclick=function(){$("dr").classList.add("on")}});
+$("close").onclick=function(){$("dr").classList.remove("on")};
+$("dr").onclick=function(e){if(e.target===$("dr"))$("dr").classList.remove("on")};
+$("pay").onclick=function(){$("msg").textContent=!qty()?"Agregá un producto para continuar.":$("prov").value===""?"Elegí tu provincia para calcular el envío.":"Maqueta: acá se abre el pago de Mercado Pago."};
+$("home-blog").innerHTML=B.slice(0,3).map(bcard).join("");$("blog-list").innerHTML=B.map(bcard).join("");
+drawChips();drawList();draw();route();
+</script>
+</body>
+</html>
